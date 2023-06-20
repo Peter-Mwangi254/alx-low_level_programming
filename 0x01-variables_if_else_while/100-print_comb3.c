@@ -8,31 +8,27 @@
 
 int main(void)
 {
-	int x = '0';
-	int y = '0';
+int c, i;
+for (c = '0'; c <= '9'; c++)
+{
+for (i = '0'; i <= '9'; i++)
+{
+if (c < i)
+{
+putchar(c);
+putchar(i);
 
-	while (x <= '9')
-	{
-		while (y <= '9')
-		{
-			if (!(x > y) || x == y)
-			{
-				putchar(x);
-				putchar(y);
-				if (x == '8' && y == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-y++;		
-		}
-		y = '0';
-		x++;
-	}
+if (c != '8' || (c == '8' && i != '9'))
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+
+putchar('\n');
+
+
 return (0);
 }
