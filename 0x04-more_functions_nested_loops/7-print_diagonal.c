@@ -3,8 +3,7 @@
 /**
  * print_diagonal - printing lines diagonal
  * @n: input variable
- *
- * Return: void
+ * Return: 0 when program runs successfully
  */
 
 
