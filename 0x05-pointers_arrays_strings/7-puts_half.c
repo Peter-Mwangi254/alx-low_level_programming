@@ -1,23 +1,30 @@
 #include "main.h"
+
 /**
-* put_half - function that print half of the string
-* @str: input string
-*/
-void put_half(char *str)
-{
-int x, y;
-x = 0;
-while (str[x] != '\0')
-x++;
-y = x / 2;
+ *puts_half - prints every other character of a string
+ *@str: A pointer to an int that will be changed
+ *
+ *Return: 0 when program is successful
+ */
 
-if (x % 2 == 1)
-y++;
+void puts_half(char *str)
 
-while (y < x)
 {
-_putchar(str[y]);
-y++;
+int i, last;
+
+i = 0;
+while (str[i] != '\0')
+{
+i++;
 }
-_putchar('\n');
+
+last = (i + 1) / 2;
+
+for (i = last; str[i]; i++)
+{
+_putchar (str[i]);
+}
+
+_putchar ('\n');
+
 }
