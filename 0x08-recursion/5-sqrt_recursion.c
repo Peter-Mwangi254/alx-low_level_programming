@@ -1,6 +1,14 @@
 #include "main.h"
 
-int sqrt_function(int num, int root)
+/**
+* square_root_function - recurses to find the natural square root
+* @num: number to calculate the squarere root
+* @root: integer
+*
+* Return: the resulting square root
+*/
+
+int square_root_function(int num, int root)
 
 {
 if ((root * root) > num)
@@ -12,7 +20,7 @@ else if ((root * root) == num)
 return (root);
 }
 else
-return (sqrt_function(num , root + 1));
+return (square_root_function(num, root + 1));
 }
 
 /**
@@ -25,7 +33,6 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else
-	return (sqrt_function(n, 0));
+	return (square_root_function(n, 0));
 }
 
