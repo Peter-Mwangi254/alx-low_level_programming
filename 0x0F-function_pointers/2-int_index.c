@@ -3,6 +3,7 @@
 /**
 * int_index- searches for an integer
 * @array: array to be searched
+* @size: size of the array
 * @cmp: pointer to the comparing function
 * Return: returns the index of the first element for which cmp is successful
 * and -1 if there is no match
@@ -20,4 +21,4 @@ return (i);
 }
 }
 return (-1);
-} 
+}
