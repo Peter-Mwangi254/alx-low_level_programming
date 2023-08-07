@@ -5,7 +5,7 @@
 * main - main function
 * @argc : number of arguments
 * @argv : a pointer to the array of arguments
-* Return : 0 when succesful
+* Return:0 when successful
 **/
 
 int main(int argc, char **argv)
@@ -24,9 +24,9 @@ return (0);
 a1 = open(argv[1], O_RDONLY);
 error_98(a1, buffer, argv[1]);
 a0 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-error_99(a0, buffer,argv[2]);
-do{
-	result1 = read(a1, bugger,BUF_SIZE);
+error_99(a0, buffer, argv[2]);
+do {
+	result1 = read(a1, bugger, BUF_SIZE);
 	if (result1 == 0)
 		break;
 	error_98(result1, buffer, argv[1];
