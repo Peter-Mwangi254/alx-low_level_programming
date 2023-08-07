@@ -37,3 +37,4 @@ do {
 	error_100(result1, buffer);
 	free(buffer);
 	return (0);
+}
