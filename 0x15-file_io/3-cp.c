@@ -38,3 +38,35 @@ do {
 	free(buffer);
 	return (0);
 }
+
+/**
+* error_98 - checks the error 98
+* @a0: value to check
+*@buffer: the buffer
+*@argv: argument vector
+**/
+
+void error_98(int a0, char *buffer, char *argv)
+{
+if (a0 < 0)
+{
+dprint(STDERR_FILENO, "Error: Can't read from the file %s\n", argv);
+free(buffer);
+exit(99);
+}
+}
+/**
+* error_100 - checks the error 100
+* @a0: the value to check
+* @buffer: the buffer
+**/
+
+void e rror_100(int a0, char *buffer)
+{
+if (a0 < 0)
+{
+dprintf(STDERR_FILEN0, "Error: Can't close fd %i\n", ao);
+free(buffer);
+exit(100);
+}
+}
