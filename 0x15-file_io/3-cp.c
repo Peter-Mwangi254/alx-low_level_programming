@@ -1,5 +1,11 @@
 #include "main.h"
 #define BUF_SIZE 1024
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
 * main - main function
@@ -50,11 +56,29 @@ void error_98(int a0, char *buffer, char *argv)
 {
 if (a0 < 0)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", argv);
+dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", a0);
+free(buffer);
+exit(98);
+}
+}
+
+/**
+* error_99 - checks error 99
+* @buffer: the buffer
+* @a0: value to check
+* @argv: argument
+*/
+
+void error_99(int a0, char *buffer, char *argv)
+{
+if (a0 < 0)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
 free(buffer);
 exit(99);
 }
 }
+
 /**
 * error_100 - checks the error 100
 * @a0: the value to check
