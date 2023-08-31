@@ -1,6 +1,6 @@
-###**C PROGRAMMING LANGUAGE**
- #Hello world project
- #variables, if, else & loops
+###**C PROGRAMMING LANGUAGE**<br/>
+ #Hello world project<br/>
+ #variables, if, else & loops<br/>
  #Functions and nested loops.
  #Debugging skills
  #More functions & nested loop projects
