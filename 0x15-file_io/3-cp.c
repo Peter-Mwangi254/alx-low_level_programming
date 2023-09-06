@@ -50,7 +50,7 @@ int main(int ac, char *av[])
 		nchars = read(file_from, buf, 1024);
 		if (nchars == -1)
 			file_error(-1, 0, av);
-		nwr = write(file_to, buf, 1024);
+		nwr = write(file_to, buf, nchars);
 		if (nwr == -1)
 			file_error(0, -1, av);
 	}
@@ -62,6 +62,7 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 	error_close = close(file_to);
+	if (error_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
